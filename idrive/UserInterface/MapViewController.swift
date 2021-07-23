@@ -26,6 +26,22 @@ class MapViewController: UIViewController {
         annotations.title = self.countryname
         annotations.coordinate = CLLocationCoordinate2D(latitude:self.latitude ?? 0.0, longitude: self.longitude ?? 0.0)
         mapView.addAnnotation(annotations)
+        
+        let latitude:CLLocationDegrees = self.latitude ?? 0.0
+        
+        let longitude:CLLocationDegrees = self.longitude ?? 0.0
+        
+        let latDelta:CLLocationDegrees = 0.05
+        
+        let lonDelta:CLLocationDegrees = 0.05
+        
+        let span = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lonDelta)
+//
+        let location = CLLocationCoordinate2DMake(latitude, longitude)
+//
+        let region = MKCoordinateRegion(center: location, span: span)
+        
+        mapView.setRegion(region, animated: false)
     }
 
 }
