@@ -20,7 +20,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 
         cell.userName.text = ViewController.loans[indexPath.row].name
         cell.activityValue.text = ViewController.loans[indexPath.row].activity
-        cell.userSector.text = "Sector --> " + ViewController.loans[indexPath.row].sector
+        cell.userSector.text = ViewController.loans[indexPath.row].sector
         return cell
     }
     
