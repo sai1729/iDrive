@@ -8,6 +8,7 @@
 import Foundation
 
 struct loansData: Hashable {
+    //creating struct with required loan data values
     var name: String = ""
     var activity: String = ""
     var sector: String = ""

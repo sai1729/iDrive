@@ -8,6 +8,7 @@
 import UIKit
 
 class LoansTableViewCell: UITableViewCell {
+    //setting labels in xib
     @IBOutlet var userName: UILabel!
     @IBOutlet var userSector: UILabel!
     @IBOutlet var activityValue: UILabel!
@@ -22,7 +23,6 @@ class LoansTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
     
     
 }
