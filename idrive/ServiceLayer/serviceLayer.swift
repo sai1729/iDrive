@@ -26,10 +26,11 @@ class serviceLayer:UIViewController {
             if let data = data {
                 self.loans = self.parseJsonData(data: data)
                 DispatchQueue.main.async {
-                    guard let delegate = UIApplication.shared.keyWindow?.rootViewController as? ViewController else{
+                    guard let delegateViewController = UIApplication.shared.keyWindow?.rootViewController as? ViewController else{
                         return
                     }
-                    delegate.loansDataSending(loanData: self.loans)
+                    self.delegate = delegateViewController
+                    self.delegate?.loansDataSending(loanData: self.loans)
                 }
             }
         })
